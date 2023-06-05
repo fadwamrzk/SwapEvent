@@ -24,26 +24,6 @@ class Sports : Fragment() {
         View? {
 
         val recyclerVSports = view?.findViewById<RecyclerView>(R.id.recyclerViewEventsSports)
-/*        val eventService= RetrofitInstance.buildEventsService()
-        eventService.getEvent().enqueue(object : Callback<General> {
-
-            override fun onResponse(call: Call<General>, response: Response<General>)
-            {
-                if (response.isSuccessful){
-                    val items=response.body() as General
-
-                    val eventsAdapter = EventsAdapter(items._embedded.events)
-                    recyclerVSports?.layoutManager = LinearLayoutManager(requireContext())
-                    recyclerVSports?.adapter = eventsAdapter
-                    Log.println(Log.ASSERT, "-------SPORTS--------", response.body().toString())
-                }
-            }
-
-            override fun onFailure(call: Call<General>, t:Throwable){
-                Toast.makeText(requireContext(),"Server Error", Toast.LENGTH_LONG).show()
-                Log.println(Log.ASSERT, "////////", t.message.toString())
-            }
-        })*/
 
         return inflater.inflate(R.layout.fragment_sports, container, false)
     }
