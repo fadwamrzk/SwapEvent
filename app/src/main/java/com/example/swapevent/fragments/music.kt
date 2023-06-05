@@ -25,28 +25,6 @@ class Music : Fragment() {
         View? {
 
         val recyclerVMusic = view?.findViewById<RecyclerView>(R.id.recyclerViewEventsMusic)
-/*
-        val eventService= RetrofitInstance.buildEventsService()
-        eventService.getEvent().enqueue(object : Callback<General> {
-
-            override fun onResponse(call: Call<General>, response: Response<General>)
-            {
-                if (response.isSuccessful){
-                    val items=response.body() as General
-
-                    val eventsAdapter = EventsAdapter(items._embedded.events)
-                    recyclerVMusic?.layoutManager = LinearLayoutManager(requireContext())
-                    recyclerVMusic?.adapter = eventsAdapter
-                    Log.println(Log.ASSERT, "-------MUSIC--------", response.body().toString())
-                }
-            }
-
-            override fun onFailure(call: Call<General>, t:Throwable){
-                Toast.makeText(requireContext(),"Server Error", Toast.LENGTH_LONG).show()
-                Log.println(Log.ASSERT, "//////", t.message.toString())
-            }
-        })
-*/
 
         return inflater.inflate(R.layout.fragment_music, container, false)
     }
